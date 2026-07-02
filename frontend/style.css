@@ -1,49 +1,107 @@
+/* Styling entire webpage body */
 body {
+
+    /* Removes default spacing */
     margin: 0;
     padding: 0;
+
+    /* Font style */
     font-family: Arial, sans-serif;
+
+    /* Background color */
     background-color: #f4f4f4;
 }
 
+/* Main container styling */
 .container {
+
+    /* Width of container */
     width: 60%;
+
+    /* Centering container */
     margin: 100px auto;
+
+    /* Centering text */
     text-align: center;
+
+    /* White background */
     background: white;
+
+    /* Space inside container */
     padding: 40px;
+
+    /* Rounded corners */
     border-radius: 12px;
 }
 
+/* Main heading styling */
 h1 {
+
+    /* Text color */
     color: #333;
 }
 
+/* Subtitle paragraph styling */
 .subtitle {
+
+    /* Gray text */
     color: gray;
+
+    /* Space below subtitle */
     margin-bottom: 30px;
 }
 
+/* Button styling */
 button {
+
+    /* Button background color */
     background-color: #007bff;
+
+    /* Text color */
     color: white;
+
+    /* Removes border */
     border: none;
+
+    /* Space inside button */
     padding: 14px 24px;
+
+    /* Text size */
     font-size: 16px;
+
+    /* Rounded corners */
     border-radius: 8px;
+
+    /* Hand cursor on hover */
     cursor: pointer;
 }
 
+/* Button hover effect */
 button:hover {
+
+    /* Darker blue on hover */
     background-color: #0056b3;
 }
 
+/* Output box styling */
 .output-box {
+
+    /* Space above output box */
     margin-top: 30px;
+
+    /* Space inside box */
     padding: 20px;
+
+    /* Light gray background */
     background: #f0f0f0;
+
+    /* Rounded corners */
     border-radius: 8px;
 }
 
+/* Speech output text styling */
 #output {
+
+    /* Text size */
     font-size: 18px;
 }

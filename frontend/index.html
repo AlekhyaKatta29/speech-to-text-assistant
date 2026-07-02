@@ -1,36 +1,57 @@
+<!-- Tells browser this is an HTML5 document -->
 <!DOCTYPE html>
+
+<!-- Starting HTML document -->
 <html lang="en">
 
 <head>
+
+    <!-- Supports emojis and special characters -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Makes website responsive on mobile -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
     <title>Speech to Text Assistant</title>
 
+    <!-- Connecting CSS file -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+    <!-- Main container for the whole webpage -->
     <div class="container">
 
+        <!-- Main heading -->
         <h1>🎤 Speech to Text Assistant</h1>
 
+        <!-- Small instruction text -->
         <p class="subtitle">
             Click the microphone button and start speaking
         </p>
 
+        <!-- Button to start speech recognition -->
         <button onclick="startListening()">
             Start Listening
         </button>
 
+        <!-- Box to display speech result -->
         <div class="output-box">
+
+            <!-- Text updated using JavaScript -->
             <p id="output">
                 Your speech will appear here...
             </p>
+
         </div>
 
     </div>
 
+    <!-- Connecting JavaScript file -->
     <script src="script.js"></script>
 
 </body>
