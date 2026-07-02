@@ -18,7 +18,31 @@ function startListening() {
         // Changes output text
         output.innerText = "🎙️ Listening...";
     };
+// Function to download speech as TXT file
+function downloadTXT() {
 
+    // Gets output text
+    const text =
+        document.getElementById("output").innerText;
+
+    // Creates text blob
+    const blob =
+        new Blob([text], { type: "text/plain" });
+
+    // Creates temporary download link
+    const link =
+        document.createElement("a");
+
+    // File URL
+    link.href =
+        URL.createObjectURL(blob);
+
+    // File name
+    link.download = "speech.txt";
+
+    // Automatically clicks link
+    link.click();
+}
     // Runs when speech is recognized
     recognition.onresult = function (event) {
 
