@@ -18,31 +18,7 @@ function startListening() {
         // Changes output text
         output.innerText = "🎙️ Listening...";
     };
-// Function to download speech as TXT file
-function downloadTXT() {
 
-    // Gets output text
-    const text =
-        document.getElementById("output").innerText;
-
-    // Creates text blob
-    const blob =
-        new Blob([text], { type: "text/plain" });
-
-    // Creates temporary download link
-    const link =
-        document.createElement("a");
-
-    // File URL
-    link.href =
-        URL.createObjectURL(blob);
-
-    // File name
-    link.download = "speech.txt";
-
-    // Automatically clicks link
-    link.click();
-}
     // Runs when speech is recognized
     recognition.onresult = function (event) {
 
@@ -70,4 +46,52 @@ function downloadTXT() {
 
     // Starts speech recognition
     recognition.start();
+}
+
+
+// Function to download speech as TXT file
+function downloadTXT() {
+
+    // Gets output text
+    const text =
+        document.getElementById("output").innerText;
+
+    // Creates text blob
+    const blob =
+        new Blob([text], { type: "text/plain" });
+
+    // Creates temporary download link
+    const link =
+        document.createElement("a");
+
+    // File URL
+    link.href =
+        URL.createObjectURL(blob);
+
+    // File name
+    link.download = "speech.txt";
+
+    // Automatically clicks link
+    link.click();
+}
+
+
+// Function to download speech as PDF
+function downloadPDF() {
+
+    // Gets speech text
+    const text =
+        document.getElementById("output").innerText;
+
+    // Access jsPDF library
+    const { jsPDF } = window.jspdf;
+
+    // Creates PDF document
+    const doc = new jsPDF();
+
+    // Adds text into PDF
+    doc.text(text, 10, 20);
+
+    // Downloads PDF
+    doc.save("speech.pdf");
 }
