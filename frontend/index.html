@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech to Text Assistant</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Speech to Text Assistant 🎤</h1>
+    <div class="container">
 
-    <button onclick="startListening()">
-        Start Listening
-    </button>
+        <h1>🎤 Speech to Text Assistant</h1>
 
-    <p id="output">
-        Your speech will appear here...
-    </p>
+        <p class="subtitle">
+            Click the microphone button and start speaking
+        </p>
+
+        <button onclick="startListening()">
+            Start Listening
+        </button>
+
+        <div class="output-box">
+            <p id="output">
+                Your speech will appear here...
+            </p>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 
